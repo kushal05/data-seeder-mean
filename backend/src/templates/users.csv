@@ -1,0 +1,6 @@
+id,name,email,password,createdAt,updatedAt
+user-1,John Doe,john@example.com,pass123,2024-03-14,2024-03-14
+user-2,Jane Smith,jane@example.com,pass456,2024-03-14,2024-03-14
+user-3,Mike Johnson,mike@example.com,pass789,2024-03-14,2024-03-14
+user-4,Sarah Wilson,sarah@example.com,passabc,2024-03-14,2024-03-14
+user-5,Tom Brown,tom@example.com,passdef,2024-03-14,2024-03-14 

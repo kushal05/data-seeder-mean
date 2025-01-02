@@ -1,0 +1,6 @@
+id,plotId,invoiceName,createdAt,updatedAt
+inv-1,plot-1,Plot Purchase Invoice,2024-03-14,2024-03-14
+inv-2,plot-2,Development Charges,2024-03-14,2024-03-14
+inv-3,plot-3,Maintenance Fee,2024-03-14,2024-03-14
+inv-4,plot-4,Registration Fee,2024-03-14,2024-03-14
+inv-5,plot-5,Service Charges,2024-03-14,2024-03-14 
