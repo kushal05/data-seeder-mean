@@ -1,0 +1,104 @@
+<div class="container">
+  <h1>{{title}}</h1>
+  <mat-stepper orientation="vertical">
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Step 1</ng-template>
+        <div class="step-content">
+          <mat-form-field>
+            <mat-label>First Step</mat-label>
+            <input matInput formControlName="firstCtrl" required>
+          </mat-form-field>
+          <div class="file-actions">
+            <input
+              type="file"
+              #fileInput1
+              accept=".csv"
+              style="display: none"
+              (change)="onFileSelected($event, 1)"
+            >
+            <button mat-raised-button color="accent" (click)="fileInput1.click()">
+              <mat-icon>upload</mat-icon>
+              Upload CSV
+            </button>
+            <button mat-raised-button color="accent" (click)="downloadTemplate(1)">
+              <mat-icon>download</mat-icon>
+              Download Template
+            </button>
+          </div>
+          <div class="button-row">
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+          </div>
+        </div>
+      </form>
+    </mat-step>
+    
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Step 2</ng-template>
+        <div class="step-content">
+          <mat-form-field>
+            <mat-label>Second Step</mat-label>
+            <input matInput formControlName="secondCtrl" required>
+          </mat-form-field>
+          <div class="file-actions">
+            <input
+              type="file"
+              #fileInput2
+              accept=".csv"
+              style="display: none"
+              (change)="onFileSelected($event, 2)"
+            >
+            <button mat-raised-button color="accent" (click)="fileInput2.click()">
+              <mat-icon>upload</mat-icon>
+              Upload CSV
+            </button>
+            <button mat-raised-button color="accent" (click)="downloadTemplate(2)">
+              <mat-icon>download</mat-icon>
+              Download Template
+            </button>
+          </div>
+          <div class="button-row">
+            <button mat-stroked-button color="primary" matStepperPrevious>Back</button>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+          </div>
+        </div>
+      </form>
+    </mat-step>
+    
+    <mat-step [stepControl]="thirdFormGroup">
+      <form [formGroup]="thirdFormGroup">
+        <ng-template matStepLabel>Step 3</ng-template>
+        <div class="step-content">
+          <mat-form-field>
+            <mat-label>Third Step</mat-label>
+            <input matInput formControlName="thirdCtrl" required>
+          </mat-form-field>
+          <div class="file-actions">
+            <input
+              type="file"
+              #fileInput3
+              accept=".csv"
+              style="display: none"
+              (change)="onFileSelected($event, 3)"
+            >
+            <button mat-raised-button color="accent" (click)="fileInput3.click()">
+              <mat-icon>upload</mat-icon>
+              Upload CSV
+            </button>
+            <button mat-raised-button color="accent" (click)="downloadTemplate(3)">
+              <mat-icon>download</mat-icon>
+              Download Template
+            </button>
+          </div>
+          <div class="button-row">
+            <button mat-stroked-button color="primary" matStepperPrevious>Back</button>
+            <button mat-raised-button color="primary" (click)="onButtonClick()">Submit</button>
+          </div>
+        </div>
+      </form>
+    </mat-step>
+  </mat-stepper>
+  <router-outlet></router-outlet>
+</div>
+
